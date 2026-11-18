@@ -1,0 +1,18 @@
+{
+ "chosen_epochs": 7500,
+ "selected_on_arm": "a3_base_short",
+ "criterion": "mean normalised EMD (shared columns) vs held-out real days",
+ "tune_seeds": [
+  11,
+  22,
+  33
+ ],
+ "grid": [
+  1000,
+  2000,
+  3000,
+  5000,
+  7500,
+  10000
+ ]
+}

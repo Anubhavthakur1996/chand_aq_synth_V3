@@ -1,0 +1,72 @@
+Dataset: chandigarh   runs: 12   (mean +/- std over seeds; lower is better except nn_ratio)
+
+a1_base_long  (n=3, epochs=[100000])
+   emd_norm_heldout          0.3327 +/-  0.0020
+   emd_norm_train            0.0767 +/-  0.0021
+   delta_acf_heldout         0.1689 +/-  0.0023
+   frobenius_heldout         1.3588 +/-  0.0259
+   nn_ratio                  0.3600 +/-  0.0074
+   tstr_rf_mae               6.9808 +/-  0.3507
+   trtr_rf_mae               8.3354 +/-  0.0000
+   urr_rf                    0.8375 +/-  0.0421
+   tstr_gbm_mae              6.7894 +/-  0.0332
+   shuffle_rf_mae           29.4032 +/-  0.5548
+   secondary_rf_mae             nan +/-     nan
+a2_time_long  (n=3, epochs=[100000])
+   emd_norm_heldout          0.3290 +/-  0.0023
+   emd_norm_train            0.0715 +/-  0.0012
+   delta_acf_heldout         0.1650 +/-  0.0009
+   frobenius_heldout         1.3928 +/-  0.0108
+   nn_ratio                  0.3191 +/-  0.0130
+   tstr_rf_mae               6.9202 +/-  0.1027
+   trtr_rf_mae               8.3354 +/-  0.0000
+   urr_rf                    0.8302 +/-  0.0123
+   tstr_gbm_mae              6.8502 +/-  0.0367
+   shuffle_rf_mae           27.7854 +/-  0.5673
+   secondary_rf_mae          6.8787 +/-  0.1089
+a3_base_short  (n=3, epochs=[7500])
+   emd_norm_heldout          0.3434 +/-  0.0061
+   emd_norm_train            0.1212 +/-  0.0047
+   delta_acf_heldout         0.1818 +/-  0.0054
+   frobenius_heldout         1.4881 +/-  0.0394
+   nn_ratio                  0.6318 +/-  0.0033
+   tstr_rf_mae               7.4230 +/-  0.1876
+   trtr_rf_mae               8.3354 +/-  0.0000
+   urr_rf                    0.8905 +/-  0.0225
+   tstr_gbm_mae              7.7067 +/-  0.1140
+   shuffle_rf_mae           31.2907 +/-  2.7322
+   secondary_rf_mae             nan +/-     nan
+a4_time_short  (n=3, epochs=[7500])
+   emd_norm_heldout          0.3642 +/-  0.0030
+   emd_norm_train            0.1458 +/-  0.0060
+   delta_acf_heldout         0.1819 +/-  0.0041
+   frobenius_heldout         1.5246 +/-  0.0178
+   nn_ratio                  0.6269 +/-  0.0069
+   tstr_rf_mae               7.1472 +/-  0.3763
+   trtr_rf_mae               8.3354 +/-  0.0000
+   urr_rf                    0.8575 +/-  0.0451
+   tstr_gbm_mae              7.8557 +/-  0.5133
+   shuffle_rf_mae           31.2050 +/-  1.4243
+   secondary_rf_mae          7.1463 +/-  0.3666
+
+Paired differences over seeds (first minus second; negative = first is better for error metrics)
+a2_time_long - a1_base_long  (n=3)
+   emd_norm_heldout         -0.0037 +/-  0.0005
+   tstr_rf_mae              -0.0606 +/-  0.4161
+   urr_rf                   -0.0073 +/-  0.0499
+a3_base_short - a1_base_long  (n=3)
+   emd_norm_heldout          0.0107 +/-  0.0069
+   tstr_rf_mae               0.4421 +/-  0.4912
+   urr_rf                    0.0530 +/-  0.0589
+a4_time_short - a1_base_long  (n=3)
+   emd_norm_heldout          0.0315 +/-  0.0044
+   tstr_rf_mae               0.1664 +/-  0.6929
+   urr_rf                    0.0200 +/-  0.0831
+a4_time_short - a2_time_long  (n=3)
+   emd_norm_heldout          0.0353 +/-  0.0043
+   tstr_rf_mae               0.2270 +/-  0.2832
+   urr_rf                    0.0272 +/-  0.0340
+a4_time_short - a3_base_short  (n=3)
+   emd_norm_heldout          0.0208 +/-  0.0034
+   tstr_rf_mae              -0.2757 +/-  0.4089
+   urr_rf                   -0.0331 +/-  0.0491

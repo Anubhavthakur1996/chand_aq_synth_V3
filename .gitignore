@@ -1,0 +1,8 @@
+/env
+/.env
+__pycache__
+# generated outputs
+/results/*/synthetic/
+/data/processed/
+*.pt
+*.pth

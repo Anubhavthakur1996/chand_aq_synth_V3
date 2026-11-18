@@ -1,0 +1,25 @@
+Dataset: bilbao   runs: 6   (mean +/- std over seeds; lower is better except nn_ratio)
+
+a1_base_long  (n=3, epochs=[100000])
+   emd_norm_train            0.0612 +/-  0.0021
+   nn_ratio                     nan +/-     nan
+   tstr_rf_mae               3.0605 +/-  0.1928
+   trtr_rf_mae               2.4343 +/-  0.0000
+   urr_rf                    1.2573 +/-  0.0792
+   tstr_gbm_mae              2.8611 +/-  0.2382
+   shuffle_rf_mae            5.2571 +/-  0.7946
+   secondary_rf_mae             nan +/-     nan
+a4_time_short  (n=3, epochs=[7500])
+   emd_norm_train            0.1096 +/-  0.0091
+   nn_ratio                     nan +/-     nan
+   tstr_rf_mae               3.9260 +/-  0.6367
+   trtr_rf_mae               2.4343 +/-  0.0000
+   urr_rf                    1.6128 +/-  0.2616
+   tstr_gbm_mae              3.4490 +/-  0.5383
+   shuffle_rf_mae            5.5100 +/-  0.2083
+   secondary_rf_mae          4.0536 +/-  0.5453
+
+Paired differences over seeds (first minus second; negative = first is better for error metrics)
+a4_time_short - a1_base_long  (n=3)
+   tstr_rf_mae               0.8654 +/-  0.7459
+   urr_rf                    0.3555 +/-  0.3064

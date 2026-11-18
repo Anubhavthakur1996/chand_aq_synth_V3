@@ -1,0 +1,24 @@
+# Known-working stack (versions taken from the author's working environment: WSL2, Python 3.10, CUDA 12.6).
+# Install in TWO steps (see README.md and INSTALL_WSL.md):
+#   1)  pip install -r requirements.txt
+#   2)  pip install --no-deps gretel-synthetics==0.20.0
+#       (gretel-synthetics must be installed WITHOUT its dependencies: its legacy TensorFlow dependency tree
+#        is broken/huge, and the packages below already cover what the DGAN code needs)
+# For a CPU-only install (much smaller), replace the first two lines by:  --index-url https://download.pytorch.org/whl/cpu
+#   and use `torch==<version>` without the +cu126 suffix.
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.14.1+cu126
+torchvision==0.29.1+cu126
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==25.0.1
+scipy==1.15.3
+scikit-learn==1.7.2
+statsmodels==0.15.0
+matplotlib==3.10.9
+einops==0.8.2
+tqdm==4.70.1
+requests==2.34.2
+category-encoders
+# only needed for utils/fetchdata.py (OpenAQ download), not for main.py:
+# python-dotenv

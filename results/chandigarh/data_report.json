@@ -1,0 +1,68 @@
+{
+  "dataset": "chandigarh",
+  "raw_rows": 11442,
+  "duplicate_timestamps_averaged": 0,
+  "date_range": [
+    "2025-02-19 02:00:00",
+    "2026-08-01 04:00:00"
+  ],
+  "grid_hours": 12676,
+  "hours_with_any_missing_value_before_interpolation": 2722,
+  "interpolation": "linear, gaps <= 3 consecutive hours, interior only",
+  "cells_interpolated": 5979,
+  "hours_dropped_after_interpolation": 1457,
+  "final_rows": 11219,
+  "segments": 147,
+  "longest_segment_hours": 356,
+  "longest_gap_hours": 240.0,
+  "gaps_longer_than_1h": 146,
+  "train_rows": 336,
+  "val_rows": 336,
+  "test_rows": 10547,
+  "train_block_span_hours": 366.0,
+  "train_block_gaps": 1,
+  "raw_missing_share_percent": {
+    "pm25": 11.07,
+    "pm10": 11.16,
+    "o3": 14.24,
+    "co": 13.16,
+    "so2": 10.92,
+    "temp": 9.74,
+    "rh": 10.69,
+    "ws": 10.08,
+    "wd": 10.11,
+    "no": 12.13,
+    "no2": 11.93
+  },
+  "max_values": {
+    "pm25": 746.0,
+    "pm10": 900.0,
+    "o3": 231.0,
+    "co": 6.667411042944786,
+    "so2": 450.71738241308793,
+    "temp": 41.3,
+    "rh": 96.0,
+    "ws": 3.8,
+    "wd": 359.0,
+    "no": 430.8184049079755,
+    "no2": 779.0650306748466
+  },
+  "outlier_policy": "none (values kept as recorded; extreme maxima listed above)",
+  "local_timezone_for_time_features": "Asia/Kolkata",
+  "nox_handling": "drop",
+  "nox_raw_column_diagnostics": {
+    "labelled_unit_in_source": "ppb (as are NO and NO2)",
+    "rows_used": 11137,
+    "mean_nox": 0.0227,
+    "mean_no_plus_no2": 36.508,
+    "share_rows_nox_ge_no_plus_no2": 0.0,
+    "pearson_r_nox_vs_no_plus_no2": 0.9935,
+    "median_ratio_nox_over_no_plus_no2": 0.000588,
+    "iqr_ratio": [
+      0.000564,
+      0.000641
+    ],
+    "conclusion": "NOx is a near-perfect rescaled copy of NO + NO2 with an inconsistent unit; handled as NOX_HANDLING='drop'"
+  },
+  "nox_plausibility_of_used_column": null
+}

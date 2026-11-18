@@ -1,0 +1,250 @@
+{
+ "dataset": "bilbao",
+ "arm": "a1_base_long",
+ "seed": 123,
+ "epochs": 100000,
+ "features": [
+  "pm25",
+  "pm10",
+  "o3",
+  "co",
+  "so2",
+  "temp",
+  "rh",
+  "ws",
+  "wd",
+  "no",
+  "no2",
+  "nox",
+  "benzene",
+  "ethylbenzene",
+  "orthoxylene",
+  "toluene",
+  "precip"
+ ],
+ "n_train_windows": 13,
+ "n_synthetic_sequences": 3650,
+ "train_generate_seconds": 14483.9,
+ "clock_diagnostics_before_projection": {},
+ "fidelity_vs_train": {
+  "arm_cols": {
+   "emd_norm": 0.06046621584826368,
+   "js_distance": 0.1959685220908665,
+   "delta_acf": 0.014587891005973679,
+   "frobenius": 0.3666535813656489
+  },
+  "shared_cols": {
+   "emd_norm": 0.06046621584826368,
+   "js_distance": 0.1959685220908665,
+   "delta_acf": 0.014587891005973679,
+   "frobenius": 0.3666535813656489
+  },
+  "per_feature": [
+   {
+    "feature": "pm25",
+    "emd_norm": 0.06938,
+    "js_distance": 0.23004,
+    "delta_acf": 0.00668
+   },
+   {
+    "feature": "pm10",
+    "emd_norm": 0.06108,
+    "js_distance": 0.18864,
+    "delta_acf": 0.02011
+   },
+   {
+    "feature": "o3",
+    "emd_norm": 0.04161,
+    "js_distance": 0.20443,
+    "delta_acf": 0.01977
+   },
+   {
+    "feature": "co",
+    "emd_norm": 0.06897,
+    "js_distance": 0.3221,
+    "delta_acf": 0.008
+   },
+   {
+    "feature": "so2",
+    "emd_norm": 0.06145,
+    "js_distance": 0.17159,
+    "delta_acf": 0.02518
+   },
+   {
+    "feature": "temp",
+    "emd_norm": 0.04708,
+    "js_distance": 0.16766,
+    "delta_acf": 0.01812
+   },
+   {
+    "feature": "rh",
+    "emd_norm": 0.05148,
+    "js_distance": 0.22979,
+    "delta_acf": 0.01711
+   },
+   {
+    "feature": "ws",
+    "emd_norm": 0.08324,
+    "js_distance": 0.19069,
+    "delta_acf": 0.02937
+   },
+   {
+    "feature": "wd",
+    "emd_norm": 0.13284,
+    "js_distance": 0.28287,
+    "delta_acf": 0.01395
+   },
+   {
+    "feature": "no",
+    "emd_norm": 0.03697,
+    "js_distance": 0.19575,
+    "delta_acf": 0.01327
+   },
+   {
+    "feature": "no2",
+    "emd_norm": 0.05116,
+    "js_distance": 0.16139,
+    "delta_acf": 0.0211
+   },
+   {
+    "feature": "nox",
+    "emd_norm": 0.03737,
+    "js_distance": 0.1801,
+    "delta_acf": 0.00693
+   },
+   {
+    "feature": "benzene",
+    "emd_norm": 0.0602,
+    "js_distance": 0.12986,
+    "delta_acf": 0.01024
+   },
+   {
+    "feature": "ethylbenzene",
+    "emd_norm": 0.0739,
+    "js_distance": 0.21014,
+    "delta_acf": 0.00818
+   },
+   {
+    "feature": "orthoxylene",
+    "emd_norm": 0.05678,
+    "js_distance": 0.17675,
+    "delta_acf": 0.00823
+   },
+   {
+    "feature": "toluene",
+    "emd_norm": 0.04522,
+    "js_distance": 0.15279,
+    "delta_acf": 0.01144
+   },
+   {
+    "feature": "precip",
+    "emd_norm": 0.04919,
+    "js_distance": 0.13687,
+    "delta_acf": 0.01031
+   }
+  ]
+ },
+ "memorisation": {
+  "synth_to_train": 6.5379583101426615
+ },
+ "utility_primary": {
+  "pred_cols": [
+   "pm25",
+   "pm10",
+   "o3",
+   "co",
+   "so2",
+   "temp",
+   "rh",
+   "ws",
+   "wd",
+   "no",
+   "no2",
+   "nox",
+   "benzene",
+   "ethylbenzene",
+   "orthoxylene",
+   "toluene",
+   "precip"
+  ],
+  "n_test_samples": 24,
+  "n_trtr_samples": 314,
+  "trtr": {
+   "rf": {
+    "mae": 2.434312500000001,
+    "rmse": 3.464883970940923,
+    "r2": 0.36668074962277153
+   },
+   "gbm": {
+    "mae": 2.191377775126651,
+    "rmse": 2.9606633522325585,
+    "r2": 0.5375941145648752
+   }
+  },
+  "tstr": {
+   "14": {
+    "rf": {
+     "mae": 5.103640430305309,
+     "rmse": 6.094760061197464,
+     "r2": -0.9595598078940903
+    },
+    "gbm": {
+     "mae": 5.154650318231522,
+     "rmse": 6.161554421858802,
+     "r2": -1.0027460077664525
+    }
+   },
+   "365": {
+    "rf": {
+     "mae": 2.8693051939835854,
+     "rmse": 4.099822656994534,
+     "r2": 0.11330259071140747
+    },
+    "gbm": {
+     "mae": 2.698671399963454,
+     "rmse": 3.8575291877731517,
+     "r2": 0.21501069669776873
+    }
+   },
+   "3650": {
+    "rf": {
+     "mae": 2.858152005027378,
+     "rmse": 3.9875068301864456,
+     "r2": 0.16121978633704215
+    },
+    "gbm": {
+     "mae": 2.6036220979875893,
+     "rmse": 3.604233742557558,
+     "r2": 0.31471505079391415
+    }
+   }
+  },
+  "urr": {
+   "14": {
+    "rf": 2.096542835114763,
+    "gbm": 2.352241761662299
+   },
+   "365": {
+    "rf": 1.178692215557199,
+    "gbm": 1.2314952860227324
+   },
+   "3650": {
+    "rf": 1.1741105568933228,
+    "gbm": 1.1881210659066361
+   }
+  },
+  "shuffle_control": {
+   "rf": {
+    "mae": 5.728913689361716,
+    "rmse": 6.671752152730336,
+    "r2": -1.3481460522789908
+   },
+   "gbm": {
+    "mae": 6.184532375860498,
+    "rmse": 7.432543127830991,
+    "r2": -1.914205496882127
+   }
+  },
+  "shuffle_volume": 365
+ }
+}
